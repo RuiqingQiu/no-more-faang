@@ -29,7 +29,7 @@ app.get('/test', (request, response) => {
 	response.send('/test get');
 });
 app.post('/test', (request, response) => {
-	let body = request.body.city;
+	var body = request.body.city;
   fs.writeFile("./tmp/test.py", body, function(err) {
 		if (err) {
 			response.send("File save failed");
